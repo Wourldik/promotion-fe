@@ -9,7 +9,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
@@ -39,7 +38,6 @@ export const material = [
   MatChipsModule,
   MatDatepickerModule,
   MatDialogModule,
-  MatFormFieldModule,
   MatIconModule,
   MatInputModule,
   MatListModule,

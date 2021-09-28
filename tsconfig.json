@@ -16,7 +16,12 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@shared/modules": ["src/app/shared/modules"],
+      "@features/*": ["src/app/features/*"],
+      "@layout/*": ["src/app/layout/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
