@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class InputComponent {
   @Input()
-  placeholder: string;
+  placeholder: string | undefined;
 
   constructor() {}
 }

@@ -1,0 +1,177 @@
+@use '~@angular/material' as mat;
+@import 'variables';
+
+@include mat.core();
+
+/*******************************************************************************
+ * Colors from theme
+ */
+
+$background-color: #f3f4fa;
+
+$inner-border: #edeef7;
+$outer-border: #e4e5ee;
+
+$link-color: #1876d3;
+$link-visited-color: #531b8a;
+$link-hover-color: #0d62b6;
+$link-active-color: #07427d;
+
+$grey-color: #7d829b;
+$black-color: #242424;
+$red-color: #f73c43;
+
+// flash-message
+$flash-message-success: #e8f6c9;
+$flash-message-error: #fdd0d2;
+
+// sidenav
+$sidenav-text-color: #828081;
+$sidenav-icon-color: #b0b3c4;
+$sidenav-background: #060204;
+$sidenav-border-color: #333134;
+
+// toolbar
+$toolbar-icon-color: #4b5073;
+
+// shadows
+$shadow-dropdown: rgba(81, 83, 115, 0.24);
+
+// table
+$table-background: #fcfcfd;
+$table-row: #f9f9fc;
+$table-row-height: 40px;
+
+// icon
+$icon-size: 24px;
+
+/*******************************************************************************
+ * Palettes
+ */
+
+$mat-primary: (
+  50: #e9ebff,
+  100: #C9CEF6,
+  200: #A6AFEC,
+  300: #838EE2,
+  400: #6873DB,
+  500: #4E59D3,
+  600: #4248BD,
+  700: #393DB1,
+  800: #3133A5,
+  900: #231F91,
+  contrast: (
+    50: #f6f9e6,
+    100: #e9f0c0,
+    200: #dbe798,
+    300: #cddd70,
+    400: #c3d552,
+    500: #bacf33,
+    600: #aebd2e,
+    700: #9ea826,
+    800: #8d911f,
+    900: #726c13,
+  )
+);
+
+
+$mat-accent: (
+  50: #f9fafb,
+  100: #f5f6f7,
+  200: #eff0f1,
+  300: #e1e2e3,
+  400: #bebfc0,
+  500: #a0a1a2,
+  600: #777778,
+  700: #626364,
+  800: #434445,
+  900: #222324,
+  contrast: (
+    50: #fbfaf9,
+    100: #f7f6f5,
+    200: #e3e3e2,
+    300: #e3e3e2,
+    400: #c1c0bf,
+    500: #a2a1a0,
+    600: #797877,
+    700: #656463,
+    800: #454544,
+    900: #242323,
+  )
+);
+
+$mat-warn: (
+  50: #f73c43,
+  100: #f73c43,
+  200: #f73c43,
+  300: #f73c43,
+  400: #f73c43,
+  500: #f73c43,
+  600: #f73c43,
+  700: #f73c43,
+  800: #f73c43,
+  900: #f73c43,
+  contrast: (
+    50: #dafefb,
+    100: #9ffaf4,
+    200: #3cf7f1,
+    300: #00f0ed,
+    400: #00e9e9,
+    500: #00e3ea,
+    600: #00d1d6,
+    700: #00baba,
+    800: #00a5a1,
+    900: #008072,
+  )
+);
+
+/*******************************************************************************
+ * Generated palettes
+ */
+
+$pr-b2b-primary: mat.define-palette($mat-primary);
+$pr-b2b-accent: mat.define-palette($mat-accent);
+$pr-b2b-warn: mat.define-palette($mat-warn);
+
+/*******************************************************************************
+ * Angular theme
+ */
+
+$base-light-theme: mat.define-light-theme(
+    $pr-b2b-primary,
+    $pr-b2b-accent,
+    $pr-b2b-warn
+);
+
+$pr-b2b-theme: map-merge(
+  $base-light-theme,
+  (
+    background: map-get($base-light-theme, background),
+    foreground: map-get($base-light-theme, foreground)
+  )
+);
+
+/*******************************************************************************
+ * Theme variables
+ */
+
+$primary: map-get($pr-b2b-theme, primary);
+$accent: map-get($pr-b2b-theme, accent);
+$warn: map-get($pr-b2b-theme, warn);
+$background: map-get($pr-b2b-theme, background);
+$foreground: map-get($pr-b2b-theme, foreground);
+$is-dark-theme: map-get($pr-b2b-theme, is-dark);
+
+/*******************************************************************************
+ * Colors from theme
+ */
+
+$primary-color: mat.get-color-from-palette($primary);
+$accent-color: mat.get-color-from-palette($accent);
+$warn-color: mat.get-color-from-palette($warn);
+
+$border-color: mat.get-color-from-palette($foreground, divider);
+$card-background-color: mat.get-color-from-palette($background, card);
+
+// sidenav
+$sidenav-color: mat.get-color-from-palette($background, disabled-button);

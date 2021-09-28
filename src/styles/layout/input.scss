@@ -1,0 +1,280 @@
+@use '~@angular/material' as mat;
+
+@import '../shared';
+
+// The horizontal padding between the edge of the form field fill box and the start of the text.
+$mat-form-field-outline-side-padding: 0;
+// The amount of overlap between the label and the outline.
+$mat-form-field-outline-label-overlap: 0;
+
+// The padding on the infix. Mocks show half of the text size.
+$infix-padding-tb: 18px;
+$infix-padding-lf: 32px;
+// The margin applied to the form-field-infix to reserve space for the floating label.
+$infix-margin-top: 24px;
+// The horizontal padding between the edge of the subscript box and the start of the subscript text.
+$mat-form-field-outline-subscript-padding: 12px;
+// The space between the bottom of the .mat-form-field-flex area and the subscript wrapper.
+// Mocks show half of the text size, but this margin is applied to an element with the subscript
+// text font size, so we need to divide by the scale factor to make it half of the original text
+// size.
+$subscript-margin-top: 6px;
+// Font size to use for the label and subscript text.
+$subscript-font-size: 12px;
+// The padding applied to the form-field-wrapper to reserve space for the subscript, since it's
+// absolutely positioned. This is a combination of the subscript's margin and line-height, but we
+// need to multiply by the subscript font scale factor since the wrapper has a larger font size.
+$wrapper-padding-bottom: 22px;
+
+// The width of the thick outline (used for focus, hover, and validator state).
+$mat-form-field-outline-thick-width: 1px;
+
+// The width/height of the icon element.
+$mat-icon-size: $icon-size;
+
+$label-font-weight: 600;
+
+$outline-color-hover: mat.get-color-from-palette($foreground, 'darker');
+$input-icon-color:    mat.get-color-from-palette($foreground, 'darker');
+$outline-color-warn: mat.get-color-from-palette($warn);;
+
+// Label colors. Required is used for the `*` star shown in the label.
+$label-color: $grey-color;
+
+/* stylelint-disable selector-type-no-unknown */
+mat-hint,
+mat-error,
+mat-label {
+  display: inline-block;
+}
+/* stylelint-enable selector-type-no-unknown */
+
+.pr-body {
+  .mat-form-field-label {
+    color: $label-color;
+  }
+
+  .mat-form-field-label-wrapper {
+    top: -$infix-margin-top;
+    padding-top: $infix-margin-top;
+
+    font-weight: $label-font-weight;
+  }
+
+  .mat-form-field {
+    width: 100%;
+
+    input.mat-input-element {
+      max-height: 14px;
+      font-size: 16px;
+    }
+  }
+
+  .mat-form-field-infix {
+    width: 100%;
+
+    padding: $infix-padding-tb $infix-padding-lf;
+    // Throws off the baseline if we do it as a real margin, so we do it as a border instead.
+    border-top: 0 solid transparent;
+    max-height: ($infix-padding-tb * 2) + 14px;
+  }
+
+  .mat-form-field-subscript-wrapper {
+    font-size: $subscript-font-size;
+    margin-top: $subscript-margin-top;
+
+    // We want the subscript to start at the end of the content box, not the padding box,
+    // so we move it up by the padding amount (adjusted for the smaller font size);
+    top: 36px;
+  }
+
+  .mat-form-field-wrapper {
+    padding-bottom: $wrapper-padding-bottom;
+  }
+
+  .mat-form-field-appearance-outline {
+    .mat-form-field-outline-thick {
+      .mat-form-field-outline-start,
+      .mat-form-field-outline-end,
+      .mat-form-field-outline-gap {
+        border-width: $mat-form-field-outline-thick-width;
+      }
+    }
+
+    &.mat-form-field-can-float.mat-form-field-should-float {
+      .mat-form-field-outline-gap {
+        border-top-color: currentColor;
+      }
+
+      .mat-form-field-label {
+        font-size: 16px;
+        font-weight: 500;
+        transform: translateY(-24.5px);
+      }
+    }
+
+    .mat-form-field-flex {
+      padding: 0 $mat-form-field-outline-side-padding;
+      margin-top: $mat-form-field-outline-label-overlap;
+      position: relative;
+
+      background: $card-background-color;
+    }
+
+    &.mat-form-field-disabled {
+      .mat-form-field-flex {
+        background: $background-color;
+      }
+    }
+
+    .mat-form-field-outline {
+      top: $mat-form-field-outline-label-overlap;
+    }
+
+    .mat-form-field-subscript-wrapper {
+      padding: 0 $mat-form-field-outline-subscript-padding;
+    }
+
+    .mat-form-field-wrapper {
+      margin-top: 38px;
+      margin-bottom: 0;
+    }
+
+    .mat-select-arrow-wrapper {
+      transform: none;
+    }
+
+    .mat-form-field-prefix,
+    .mat-form-field-suffix {
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .mat-form-field-prefix {
+      margin-left: -$small-grid-gap;
+      margin-right: $small-grid-gap;
+    }
+
+    .mat-form-field-suffix {
+      margin-right: -$small-grid-gap;
+      margin-left: $small-grid-gap;
+    }
+
+    &.mat-focused {
+      .mat-form-field-outline-thick {
+        color: $outline-color-hover;
+      }
+
+      &.mat-accent .mat-form-field-outline-thick {
+        color: $outline-color-hover;
+      }
+
+      &.mat-warn .mat-form-field-outline-thick {
+        color: $outline-color-hover;
+      }
+    }
+
+    // Class repeated so that rule is specific enough to override focused accent color case.
+    &.mat-form-field-invalid.mat-form-field-invalid {
+      .mat-form-field-label {
+        color: $label-color;
+      }
+
+      .mat-form-field-outline-thick {
+        color: $outline-color-warn;
+      }
+    }
+
+    .mat-icon {
+      color: $input-icon-color;
+
+      &.mat-warn {
+        color: $warn-color;
+      }
+    }
+
+    &.mat-form-field.mat-focused {
+      .mat-form-field-label {
+        color: $label-color;
+
+        &.mat-accent {
+          color: $label-color;
+        }
+
+        &.mat-warn {
+          color: $label-color;
+        }
+      }
+
+      .mat-icon {
+        color: $primary-color;
+
+        &.mat-warn {
+          color: $warn-color;
+        }
+      }
+    }
+
+    .mat-form-field-prefix .mat-icon-button .mat-icon,
+    .mat-form-field-suffix .mat-icon-button .mat-icon {
+      height: $mat-icon-size;
+      width: $mat-icon-size;
+    }
+
+    .mat-form-field-prefix .mat-icon-button,
+    .mat-form-field-suffix .mat-icon-button {
+      margin-top: -10px;
+      margin-bottom: -10px;
+      vertical-align: middle;
+    }
+
+    .mat-form-field-prefix .mat-icon-button {
+      margin-left: -2px;
+      margin-right: 2px;
+    }
+
+    .mat-form-field-suffix .mat-icon-button {
+      margin-right: -2px;
+      margin-left: 2px;
+    }
+  }
+
+  // place label in input with prefix
+  .prefixed-control-label-fix {
+    .mat-form-field-label-wrapper {
+      overflow: visible;
+      margin-left: -25px;
+    }
+  }
+
+  // no subscript input wrapper
+  .no-subscript-input {
+    .mat-form-field-wrapper {
+      padding-bottom: 10px;
+
+      .mat-form-field-subscript-wrapper {
+        display: none;
+      }
+    }
+  }
+
+  // simple input styles
+  .simplified-input {
+    .mat-form-field-label-wrapper {
+      display: none;
+    }
+
+    .mat-form-field-wrapper {
+      margin-top: 10px;
+    }
+  }
+
+  .pr-input,
+  .pr-input-autocomplete,
+  .pr-input-datepicker {
+    display: inline-block;
+    width: 100%;
+  }
+}

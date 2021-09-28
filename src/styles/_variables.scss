@@ -1,0 +1,38 @@
+@use '~@angular/material' as mat;
+
+/*******************************************************************************
+ * Layout
+ */
+
+$container-width: 752px;
+
+$small-grid-gap: 4px;
+$medium-grid-gap: $small-grid-gap * 2;
+$large-grid-gap: $medium-grid-gap * 2;
+$x-large-grid-gap: $medium-grid-gap * 3;
+
+$border-size: 1px;
+
+$multiline-line-height: 16px;
+
+// sidenav
+$sidenav-width: 198px;
+$nav-list-item-height: 40px;
+
+/*******************************************************************************
+ * Typography
+ */
+
+$default-font-family-name: 'Roboto', sans-serif;
+
+$typography-config: mat.define-typography-config(
+  $font-family: $default-font-family-name,
+  $headline: mat.define-typography-level(24px, 1.17, 700),
+  $title: mat.define-typography-level(20px, 1.2, 600),
+  $subheading-2: mat.define-typography-level(16px, 1.5, 600, null, -0.1px),
+  $subheading-1: mat.define-typography-level(16px, 1.5, 400),
+  $body-1: mat.define-typography-level(13px, 1.85, 400),
+  $caption: mat.define-typography-level(12px, 2, 600, null, 0.1px),
+  $button: mat.define-typography-level(13px, 13px, 700, null, 0.2px),
+  $input: mat.define-typography-level(13px, 1.077, 400)
+);
