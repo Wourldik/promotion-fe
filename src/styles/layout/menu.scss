@@ -1,0 +1,29 @@
+@use '~@angular/material' as mat;
+
+@import '../shared';
+
+$mat-menu-vertical-padding: 8px;
+$menu-item-height: 24px + ($medium-grid-gap * 2);
+
+.pr-body {
+  .mat-menu-panel {
+    // Give the menu a minimum height so that the user can't
+    // collapse it to zero when they scroll away.
+    min-height: $menu-item-height + $mat-menu-vertical-padding * 2;
+  }
+
+  & .mat-menu-content:not(:empty) {
+    padding: 0;
+
+    .mat-divider.mat-divider-horizontal {
+      margin-top: $medium-grid-gap;
+      margin-bottom: $medium-grid-gap;
+    }
+  }
+
+  & .mat-menu-item {
+    height: $menu-item-height;
+    line-height: $menu-item-height;
+    text-decoration: none;
+  }
+}

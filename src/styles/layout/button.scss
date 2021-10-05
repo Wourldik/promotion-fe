@@ -18,78 +18,14 @@ $mat-stroked-button-padding: 0 ($button-side-padding - 1);
 $mat-icon-button-size: 40px !default;
 $mat-icon-button-line-height: 24px !default;
 
-.mat-button,
-.mat-stroked-button,
-.mat-flat-button {
-  & + & {
-    margin-left: $small-grid-gap;
-    margin-right: $small-grid-gap;
-  }
-
-  &:first-child {
-    margin-left: 0;
-    margin-right: $small-grid-gap;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.ob-body {
-  .mat-button,
-  .mat-stroked-button,
-  .mat-flat-button {
-    min-width: $mat-button-min-width;
-    padding: $mat-button-padding;
-    border-radius: $mat-button-border-radius;
-    text-decoration: none;
-  }
-
+.pr-body {
   .mat-flat-button,
   .mat-raised-button,
   .mat-fab,
   .mat-mini-fab {
-    &.mat-primary[disabled],
-    &[disabled] {
-      color: mat.get-contrast-color-from-palette($pr-b2b-primary, default-contrast);
-    }
-
-    &.mat-accent[disabled] {
-      color: mat.get-contrast-color-from-palette($pr-b2b-accent, default-contrast);
-    }
-
-    &.mat-warn[disabled] {
-      color: mat.get-contrast-color-from-palette($pr-b2b-warn, default-contrast);
-    }
-  }
-
-  .mat-stroked-button {
-    padding: $mat-stroked-button-padding;
-
-    &:not([disabled]) {
-      border-color: currentColor;
-    }
-  }
-
-  .mat-icon-button {
-    margin: (-($mat-icon-button-size - $mat-icon-button-line-height) / 2) 0;
-  }
-
-  .ob-text-button {
-    padding: 0;
-    line-height: $mat-button-height-only-text;
-    height: $mat-button-height-only-text;
-  }
-
-  // Align icon-buttons correctly inside of standard, fill, and outline form-field appearances.
-  .mat-form-field:not(.mat-form-field-appearance-legacy) {
-    .mat-form-field-prefix,
-    .mat-form-field-suffix {
-      .mat-icon-button {
-        width: 32px;
-        height: 32px;
-      }
+    &.mat-accent {
+      background-color: $dark-background-color;
+      color: $grey-color;
     }
   }
 }

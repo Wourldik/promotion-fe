@@ -1,0 +1,69 @@
+@use '~@angular/material' as mat;
+
+@import '../shared';
+
+$mat-checkbox-border-radius: 3px;
+$mat-checkbox-border-width: 1px;
+
+.pr-body {
+  .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: $primary-color;
+  }
+
+  .mat-checkbox-frame {
+    background-color: $background-color;
+  }
+
+  .mat-checkbox-background,
+  .mat-checkbox-frame {
+    border: {
+      radius: $mat-checkbox-border-radius;
+    }
+  }
+
+  .mat-checkbox-frame {
+    border: {
+      width: $mat-checkbox-border-width;
+    }
+  }
+
+  .mat-checkbox-inner-container:not(.mat-checkbox-inner-container-no-side-margin) {
+    margin: {
+      left: $small-grid-gap * 2;
+      right: $small-grid-gap * 3;
+    }
+
+    [dir='rtl'] & {
+      margin: {
+        left: $small-grid-gap * 3;
+        right: $small-grid-gap * 2;
+      }
+    }
+  }
+
+  .mat-checkbox-label-before {
+    .mat-checkbox-inner-container:not(.mat-checkbox-inner-container-no-side-margin) {
+      margin: {
+        left: $small-grid-gap * 3;
+        right: $small-grid-gap * 2;
+      }
+
+      [dir='rtl'] & {
+        margin: {
+          left: $small-grid-gap * 2;
+          right: $small-grid-gap * 3;
+        }
+      }
+    }
+  }
+
+  .mat-checkbox-layout {
+    white-space: normal;
+  }
+
+  .mat-checkbox-layout .mat-checkbox-label {
+    line-height: $multiline-line-height;
+    padding-top: $small-grid-gap;
+    padding-bottom: $small-grid-gap;
+  }
+}

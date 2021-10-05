@@ -7,7 +7,9 @@
  * Colors from theme
  */
 
-$background-color: #f3f4fa;
+$background-color: #e5e5e5;
+
+$dark-background-color: #F5F6F7;
 
 $inner-border: #edeef7;
 $outer-border: #e4e5ee;
@@ -17,7 +19,8 @@ $link-visited-color: #531b8a;
 $link-hover-color: #0d62b6;
 $link-active-color: #07427d;
 
-$grey-color: #7d829b;
+
+$grey-color: #6F7C8B;
 $black-color: #242424;
 $red-color: #f73c43;
 
@@ -73,7 +76,6 @@ $mat-primary: (
     900: $light-primary-text,
   )
 );
-
 
 $mat-accent: (
   50: #f9fafb,

@@ -1,0 +1,11 @@
+@use '~@angular/material' as mat;
+
+@import '../shared';
+
+.pr-body {
+  .mat-tab-labels {
+    & .cdk-focused {
+      color: $primary-color;
+    }
+  }
+}

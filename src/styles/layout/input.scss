@@ -36,7 +36,7 @@ $label-font-weight: 600;
 
 $outline-color-hover: mat.get-color-from-palette($foreground, 'darker');
 $input-icon-color:    mat.get-color-from-palette($foreground, 'darker');
-$outline-color-warn: mat.get-color-from-palette($warn);;
+$outline-color-warn: mat.get-color-from-palette($warn);
 
 // Label colors. Required is used for the `*` star shown in the label.
 $label-color: $grey-color;
@@ -52,6 +52,12 @@ mat-label {
 .pr-body {
   .mat-form-field-label {
     color: $label-color;
+  }
+
+  .mat-form-field-appearance-fill {
+    .mat-form-field-flex {
+      background-color: $dark-background-color;
+    }
   }
 
   .mat-form-field-label-wrapper {
