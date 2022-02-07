@@ -1,0 +1,17 @@
+@import '~src/styles/shared';
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-label {
+  padding-left: $small-grid-gap + $medium-grid-gap;
+  color: $black-color;
+}
+
+.button-icon {
+  font-size: $icon-size;
+  height: $icon-size;
+  width: $icon-size;
+}
