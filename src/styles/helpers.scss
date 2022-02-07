@@ -1,0 +1,107 @@
+@import 'utils';
+@import 'variables';
+
+/*******************************************************************************
+ * Layout
+ */
+
+.flex-row-only {
+  @extend %flex-row;
+}
+
+.flex-column-only {
+  @extend %flex-column;
+}
+
+.flex-row {
+  @extend %grow-row;
+}
+
+.flex-column {
+  @extend %grow-column;
+}
+
+.grow-row {
+  @extend %grow-row;
+}
+
+.grow-column {
+  @extend %grow-column;
+}
+
+.shrink-row {
+  @extend %shrink-row;
+}
+
+.shrink-column {
+  @extend %shrink-column;
+}
+
+.certain-row {
+  @extend %certain-row;
+}
+
+.certain-column {
+  @extend %certain-column;
+}
+
+.fill-row {
+  @extend %fill-row;
+}
+
+.fill-column {
+  @extend %fill-column;
+}
+
+.flex-center {
+  @extend %flex-center;
+}
+
+.filler {
+  @extend %flex-fill;
+  display: flex;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/*******************************************************************************
+ * Typography
+ */
+
+.text-overflow {
+  @extend %text-overflow;
+}
+
+.break-word {
+  @extend %break-word;
+}
+
+.text-center {
+  text-align: center;
+}
+
+p.no-gap-paragraph {
+  margin-bottom: 0;
+}
+
+p.small-gap-paragraph {
+  margin-bottom: $small-grid-gap;
+}
+
+p.medium-gap-paragraph {
+  margin-bottom: $medium-grid-gap;
+}
+
+p.large-gap-paragraph {
+  margin-bottom: $large-grid-gap;
+}
+
+p.x-large-gap-paragraph {
+  margin-bottom: $x-large-grid-gap;
+}

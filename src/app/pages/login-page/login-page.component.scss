@@ -1,0 +1,19 @@
+@import '~src/styles/shared';
+
+$image-size: 570px;
+
+:host {
+  @extend %grow-column;
+}
+
+.login-image-wrapper {
+  height: 100%;
+  width: 100%;
+  max-width: 40%;
+}
+
+.login-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
