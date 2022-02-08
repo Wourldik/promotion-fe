@@ -32,7 +32,7 @@ $mat-form-field-outline-thick-width: 1px;
 // The width/height of the icon element.
 $mat-icon-size: $icon-size;
 
-$label-font-weight: 600;
+$label-font-weight: 500;
 
 $outline-color-hover: mat.get-color-from-palette($foreground, 'darker');
 $input-icon-color:    mat.get-color-from-palette($foreground, 'darker');
@@ -61,8 +61,9 @@ mat-label {
   }
 
   .mat-form-field-label-wrapper {
-    top: -$infix-margin-top;
+    top: -40px;
     padding-top: $infix-margin-top;
+    left: -10px;
 
     font-weight: $label-font-weight;
   }
@@ -96,6 +97,15 @@ mat-label {
 
   .mat-form-field-wrapper {
     padding-bottom: $wrapper-padding-bottom;
+    padding-top: $wrapper-padding-bottom;
+  }
+
+  .mat-form-field-appearance-fill {
+    &.mat-form-field-can-float.mat-form-field-should-float {
+      .mat-form-field-label {
+        transform: translateY(0);
+      }
+    }
   }
 
   .mat-form-field-appearance-outline {
@@ -282,5 +292,17 @@ mat-label {
   .pr-input-datepicker {
     display: inline-block;
     width: 100%;
+  }
+
+  a {
+    &.mat-button {
+      padding: 0;
+      text-align: left;
+      max-width: fit-content;
+    }
+
+    .mat-button-focus-overlay, .mat-button-ripple {
+      display: none;
+    }
   }
 }

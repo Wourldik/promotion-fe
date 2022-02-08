@@ -1,13 +1,16 @@
 @import '~src/styles/shared';
 
-$image-size: 570px;
+$form-width: 465px;
+$icon-font-size: 46px;
+$divider-width: 25%;
+$divider-margin: 0;
 
 :host {
   @extend %grow-column;
 }
 
 .login-image-wrapper {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   max-width: 40%;
 }
@@ -15,5 +18,51 @@ $image-size: 570px;
 .login-image {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+.login-header {
+  margin-bottom: $medium-grid-gap;
+}
+
+.login-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  align-items: center;
+}
+
+.login-form {
+  max-width: $form-width;
+  margin: auto;
+}
+
+.login-hello {
+  font-size: $icon-font-size;
+}
+
+.login-social-media-divider {
+  position: relative;
+  text-align: center;
+  margin: $large-grid-gap 0;
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    bottom: $medium-grid-gap;
+    width: $divider-width;
+    border-bottom: $border-size solid $border-color;
+  }
+
+  &:before {
+    left: $divider-margin;
+  }
+
+  &:after {
+    right: $divider-margin;
+  }
+}
+
+.login-sign-in {
+  margin: $large-grid-gap;
 }
