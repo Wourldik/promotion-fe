@@ -3,3 +3,7 @@
 :host {
   @extend %grow-column;
 }
+
+.login-button {
+  margin-top: $small-grid-gap;
+}

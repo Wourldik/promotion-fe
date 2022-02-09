@@ -17,6 +17,13 @@ const routes: Routes = [
             m => m.LoginPageModule
           ),
       },
+      {
+        path: 'password-recovery',
+        loadChildren: () =>
+          import(
+            './pages/password-recovery-page/password-recovery-page.module'
+          ).then(m => m.PasswordRecoveryPageModule),
+      },
     ],
   },
   {

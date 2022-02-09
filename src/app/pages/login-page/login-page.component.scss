@@ -4,6 +4,7 @@ $form-width: 465px;
 $icon-font-size: 46px;
 $divider-width: 25%;
 $divider-margin: 0;
+$helper-font-size: 12px;
 
 :host {
   @extend %grow-column;
@@ -22,7 +23,12 @@ $divider-margin: 0;
 }
 
 .login-header {
-  margin-bottom: $medium-grid-gap;
+  font-weight: bolder;
+  margin: $x-large-grid-gap 0 $medium-grid-gap 0;
+}
+
+.login-subheader {
+  margin-bottom: $large-grid-gap * 2;
 }
 
 .login-form-wrapper {
@@ -39,12 +45,15 @@ $divider-margin: 0;
 
 .login-hello {
   font-size: $icon-font-size;
+  line-height: $icon-font-size;
 }
 
 .login-social-media-divider {
   position: relative;
   text-align: center;
-  margin: $large-grid-gap 0;
+  color: $grey-color;
+  margin: $x-large-grid-gap 0;
+  font-size: $helper-font-size;
 
   &:before, &:after {
     content: "";
@@ -64,5 +73,6 @@ $divider-margin: 0;
 }
 
 .login-sign-in {
-  margin: $large-grid-gap;
+  margin: $large-grid-gap 0;
+  color: $grey-color;
 }
