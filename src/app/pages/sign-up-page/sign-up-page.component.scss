@@ -1,0 +1,78 @@
+@import '~src/styles/shared';
+
+$form-width: 465px;
+$icon-font-size: 46px;
+$divider-width: 35%;
+$divider-margin: 0;
+$helper-font-size: 12px;
+
+:host {
+  @extend %grow-column;
+}
+
+.sign-up-image-wrapper {
+  height: 100vh;
+  width: 100%;
+  max-width: 40%;
+}
+
+.sign-up-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sign-up-header {
+  font-weight: bolder;
+  margin: $x-large-grid-gap 0 $medium-grid-gap 0;
+}
+
+.sign-up-subheader {
+  margin-bottom: $large-grid-gap * 2;
+}
+
+.sign-up-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  align-items: center;
+}
+
+.sign-up-form {
+  max-width: $form-width;
+  margin: auto;
+}
+
+.sign-up-hello {
+  font-size: $icon-font-size;
+  line-height: $icon-font-size;
+}
+
+.sign-up-social-media-divider {
+  position: relative;
+  text-align: center;
+  color: $grey-color;
+  margin: $x-large-grid-gap 0;
+  font-size: $helper-font-size;
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    bottom: $medium-grid-gap;
+    width: $divider-width;
+    border-bottom: $border-size solid $border-color;
+  }
+
+  &:before {
+    left: $divider-margin;
+  }
+
+  &:after {
+    right: $divider-margin;
+  }
+}
+
+.login-button {
+  margin: $large-grid-gap 0;
+  color: $grey-color;
+}

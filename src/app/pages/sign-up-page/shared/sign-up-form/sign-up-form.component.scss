@@ -1,0 +1,24 @@
+@import '~src/styles/shared';
+
+$max-small-input-width: 214px;
+
+:host {
+  @extend %grow-column;
+}
+
+.start-button {
+  width: 100%;
+  margin-top: $small-grid-gap;
+}
+
+.half-width {
+  max-width: $max-small-input-width;
+
+  &:not(:last-child) {
+    margin-right: $large-grid-gap * 2 + $small-grid-gap;
+  }
+}
+
+.term-checkbox {
+  color: $grey-color;
+}

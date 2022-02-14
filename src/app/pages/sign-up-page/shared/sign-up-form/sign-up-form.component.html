@@ -1,0 +1,33 @@
+<form>
+  <div class="flex-row">
+    <mat-form-field class="half-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Enter your name">
+    </mat-form-field>
+    <mat-form-field class="half-width" appearance="fill">
+      <mat-label>Age</mat-label>
+      <input matInput placeholder="Enter your age">
+    </mat-form-field>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email Address</mat-label>
+    <input matInput placeholder="Enter your email address">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Enter your password">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Confirm New Password</mat-label>
+    <input matInput placeholder="Confirm New Password">
+  </mat-form-field>
+
+  <mat-checkbox class="term-checkbox">I agree to Product
+    <a mat-button color="primary"[routerLink]="['/login']">Terms and Policy</a>.</mat-checkbox>
+
+    <button class="start-button" mat-flat-button
+            color="primary">Get started now</button>
+</form>
