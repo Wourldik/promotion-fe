@@ -31,6 +31,13 @@ const routes: Routes = [
             m => m.SignUpPageModule
           ),
       },
+      {
+        path: 'terms-and-conditions',
+        loadChildren: () =>
+          import(
+            './pages/terms-and-conditions-page/terms-and-conditions-page.module'
+          ).then(m => m.TermsAndConditionsPageModule),
+      },
     ],
   },
   {
