@@ -128,6 +128,7 @@
   },
   "defaultProject": "promotion-fe",
   "cli": {
+    "analytics": "5d80120a-b26d-4a5c-a6a5-80ba61ffd7f6",
     "defaultCollection": "@angular-eslint/schematics"
   }
 }

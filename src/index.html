@@ -16,7 +16,35 @@
       rel="stylesheet"
     />
     <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: '226595053421102',
+          cookie: true,
+          xfbml: true,
+          version: 'v13.0',
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, 'script', 'facebook-jssdk');
+    </script>
   </head>
   <body class="mat-typography pr-body">
     <pr-root></pr-root>

@@ -19,6 +19,7 @@
     "lib": ["es2018", "dom"],
     "paths": {
       "@shared/modules": ["src/app/shared/modules"],
+      "@shared/services": ["src/app/shared/services"],
       "@features/*": ["src/app/features/*"],
       "@layout/*": ["src/app/layout/*"]
     }
@@ -27,7 +28,7 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true,
-    "strictPropertyInitialization": false
+    "strictTemplates": false,
+    "strictPropertyInitialization": false,
   }
 }

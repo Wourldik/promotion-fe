@@ -1,18 +1,40 @@
 <div class="flex-row">
   <div class="sign-up-image-wrapper">
-    <img class="sign-up-image" [src]="'assets/image/sign-in-background.jpg'" [alt]="'sign-in background'" />
+    <img
+      class="sign-up-image"
+      [src]="'assets/image/sign-in-background.jpg'"
+      [alt]="'sign-in background'"
+    />
   </div>
   <div class="sign-up-form-wrapper">
     <div class="sign-up-form">
       <h1 class="sign-up-header">Get started today</h1>
-      <h4 class="sign-up-subheader">Enter your details to create super account.</h4>
+      <h4 class="sign-up-subheader">
+        Enter your details to create super account.
+      </h4>
 
-      <pr-sign-up-form></pr-sign-up-form>
+      <pr-sign-up-form (signup)="onSignUp($event)"></pr-sign-up-form>
 
       <div class="sign-up-social-media-divider">Or sign up with</div>
+      <div class="button-wrapper">
+        <button mat-stroked-button class="button-image">
+          <img
+            [src]="'assets/image/google.svg'"
+            [alt]="'Sign up with google'"
+          />
+        </button>
+
+        <button mat-stroked-button class="button-image">
+          <img
+            [src]="'assets/image/facebook.svg'"
+            [alt]="'Sign up with facebook'"
+          />
+        </button>
+      </div>
     </div>
 
-    <div class="login-button"> Already have an account?
+    <div class="login-button">
+      Already have an account?
       <a mat-button color="primary" [routerLink]="['/login']">Login</a>
     </div>
   </div>

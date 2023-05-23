@@ -1,6 +1,10 @@
 <div class="flex-row">
   <div class="login-image-wrapper">
-      <img class="login-image" [src]="'assets/image/login-background.jpg'" [alt]="'Login background'" />
+    <img
+      class="login-image"
+      [src]="'assets/image/login-background.jpg'"
+      [alt]="'Login background'"
+    />
   </div>
   <div class="login-form-wrapper">
     <div class="login-form">
@@ -8,14 +12,32 @@
       <h1 class="login-header">Welcome back</h1>
       <h4 class="login-subheader">Sing in to manage you account.</h4>
 
-      <pr-login-form></pr-login-form>
+      <pr-login-form (login)="onLogin($event)"></pr-login-form>
 
       <div class="login-social-media-divider">Or do it via other account</div>
+
+      <div class="button-wrapper">
+        <button mat-stroked-button class="button-image">
+          <img
+            [src]="'assets/image/google.svg'"
+            [alt]="'Login with google'"
+            (click)="onGoogleLogin()"
+          />
+        </button>
+
+        <button mat-stroked-button class="button-image">
+          <img
+            [src]="'assets/image/facebook.svg'"
+            [alt]="'Login with facebook'"
+            (click)="onFacebookLogin()"
+          />
+        </button>
+      </div>
     </div>
 
-    <div class="login-sign-in"> Don't have an account?
+    <div class="login-sign-in">
+      Don't have an account?
       <a mat-button color="primary" [routerLink]="['/sign-up']">Sign Up</a>
     </div>
   </div>
 </div>
-

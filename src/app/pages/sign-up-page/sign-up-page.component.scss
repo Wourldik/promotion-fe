@@ -76,3 +76,12 @@ $helper-font-size: 12px;
   margin: $large-grid-gap 0;
   color: $grey-color;
 }
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.button-image {
+  margin: 0 $medium-grid-gap;
+}

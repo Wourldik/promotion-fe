@@ -1,18 +1,34 @@
-<form>
+<form [formGroup]="form">
   <mat-form-field appearance="fill">
     <mat-label>Email Address</mat-label>
-    <input matInput placeholder="Enter your email address">
+    <input
+      matInput
+      [formControlName]="formControl.EMAIL"
+      placeholder="Enter your email address"
+    />
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Password</mat-label>
-    <input matInput placeholder="Enter your password">
+    <input
+      [formControlName]="formControl.PASSWORD"
+      matInput
+      placeholder="Enter your password"
+    />
   </mat-form-field>
 
   <div class="flex-column">
-    <a mat-button
-            color="primary" [routerLink]="['/password-recovery']">Forgot you password?</a>
-    <button class="login-button" mat-flat-button
-            color="primary">Log in</button>
+    <a mat-button color="primary" [routerLink]="['/password-recovery']"
+      >Forgot you password?</a
+    >
+    <button
+      class="login-button"
+      mat-flat-button
+      color="primary"
+      [disabled]="!valid"
+      (click)="logIn()"
+    >
+      Log in
+    </button>
   </div>
 </form>
