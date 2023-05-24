@@ -6,6 +6,7 @@ import { LoginPageComponent } from './login-page.component';
 import { shared } from './shared';
 import { LayoutModule } from '@layout/layout.module';
 import { SharedModule } from '@shared/modules';
+import {LoginService} from "./services";
 
 @NgModule({
   declarations: [LoginPageComponent],
@@ -16,5 +17,6 @@ import { SharedModule } from '@shared/modules';
     LayoutModule,
     LoginPageRoutingModule,
   ],
+  providers: [LoginService],
 })
 export class LoginPageModule {}

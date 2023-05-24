@@ -1,10 +1,19 @@
-<form>
-  <mat-form-field appearance="fill">
-    <mat-label>Email Address</mat-label>
-    <input matInput placeholder="Enter your email address" />
-  </mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Email Address</mat-label>
+  <input
+    matInput
+    placeholder="Enter your email address"
+    [formControl]="emailControl"
+  />
+</mat-form-field>
 
-  <div class="flex-column">
-    <button mat-flat-button color="primary">Reset</button>
-  </div>
-</form>
+<div class="flex-column">
+  <button
+    mat-flat-button
+    color="primary"
+    [disabled]="!emailControl.valid"
+    (click)="onResetPassword()"
+  >
+    Reset
+  </button>
+</div>

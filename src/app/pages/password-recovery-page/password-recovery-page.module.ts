@@ -6,6 +6,7 @@ import { PasswordRecoveryPageComponent } from './password-recovery-page.componen
 import { SharedModule } from '@shared/modules';
 import { LayoutModule } from '@layout/layout.module';
 import { shared } from './shared';
+import {PasswordRecoveryService} from "./services/password-recovery.service";
 
 @NgModule({
   declarations: [PasswordRecoveryPageComponent],
@@ -16,5 +17,6 @@ import { shared } from './shared';
     LayoutModule,
     PasswordRecoveryPageRoutingModule,
   ],
+  providers: [PasswordRecoveryService]
 })
 export class PasswordRecoveryPageModule {}

@@ -6,6 +6,7 @@ import { SignUpPageComponent } from './sign-up-page.component';
 import { LayoutModule } from '@layout/layout.module';
 import { SharedModule } from '@shared/modules';
 import { shared } from './shared';
+import {SignUpService} from "./services";
 
 @NgModule({
   declarations: [SignUpPageComponent],
@@ -16,5 +17,6 @@ import { shared } from './shared';
     LayoutModule,
     SignUpPageRoutingModule,
   ],
+  providers: [SignUpService],
 })
 export class SignUpPageModule {}

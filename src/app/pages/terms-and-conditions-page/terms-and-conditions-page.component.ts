@@ -1,12 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'pr-terms-and-conditions-page',
   templateUrl: './terms-and-conditions-page.component.html',
   styleUrls: ['./terms-and-conditions-page.component.scss'],
 })
-export class TermsAndConditionsPageComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class TermsAndConditionsPageComponent {
 }

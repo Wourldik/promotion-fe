@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { GoogleAuthProvider, FacebookAuthProvider } from 'firebase/auth';
 
 import { ILoginFormValue } from './shared/login-form';
+import {LoginService} from "./services";
 
 @Component({
   selector: 'pr-login-page',
@@ -10,35 +9,17 @@ import { ILoginFormValue } from './shared/login-form';
   styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent {
-  constructor(private auth: AngularFireAuth) {}
+  constructor(private loginService: LoginService) {}
 
   onLogin(value: ILoginFormValue): void {
-    this.auth
-      .signInWithEmailAndPassword(value.email, value.password)
-      .then(() => {
-        console.log('Signed in successfully!');
-      });
+    this.loginService.login(value);
   }
 
   onGoogleLogin() {
-    this.auth
-      .signInWithPopup(new GoogleAuthProvider())
-      .then(() => {
-        console.log('Signed in with Google successfully!');
-      })
-      .catch(error => {
-        console.error('Error signing in with Google:', error);
-      });
+    this.loginService.googleLogin();
   }
 
   onFacebookLogin(): void {
-    this.auth
-      .signInWithPopup(new FacebookAuthProvider())
-      .then(() => {
-        console.log('Signed in with Facebook successfully!');
-      })
-      .catch(error => {
-        console.error('Error signing in with Google:', error);
-      });
+    this.loginService.facebookLogin();
   }
 }
