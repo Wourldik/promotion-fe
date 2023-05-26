@@ -1,0 +1,20 @@
+@import '~src/styles/shared';
+
+.sidenav-spacer {
+  width: $sidenav-width - 12px;
+}
+
+.main-toolbar {
+  height: 74px;
+  font-size: 13px;
+  position: relative;
+  background-color: $card-background-color;
+  border-bottom: 1px solid $border-color;
+
+  .logo-image {
+    width: $sidenav-width - 16px;
+    height: $toolbar-height;
+    border-right: 1px solid $border-color;
+    vertical-align: middle;
+  }
+}

@@ -16,6 +16,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { ShellPageComponent } from './pages/shell-page/shell-page.component';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import {ToolbarModule} from "@layout/toolbar";
+import {SidenavModule} from "@layout/sidenav/sidenav.module";
 
 @NgModule({
   declarations: [AppComponent, ShellPageComponent],
@@ -28,6 +30,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     AngularFireAuthModule, // Import the authentication module
     AngularFireDatabaseModule, // Import the database module
     AngularFireStorageModule,
+    ToolbarModule,
+    SidenavModule,
   ],
   bootstrap: [AppComponent],
   providers: [ScreenTrackingService, UserTrackingService],

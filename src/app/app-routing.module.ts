@@ -4,6 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    loadChildren: () =>
+      import('./pages/shell-page/shell-page.module').then(
+        m => m.ShellPageModule
+      ),
+    runGuardsAndResolvers: 'always',
+  },
+  {
+    path: '',
     children: [
       {
         path: '',

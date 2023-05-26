@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import {ShellPageComponent} from "./shell-page.component";
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ShellPageComponent,
+    runGuardsAndResolvers: 'always',
+    children: [],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
