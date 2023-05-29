@@ -1,0 +1,41 @@
+@import '~src/styles/shared';
+
+:host {
+  @extend %grow-column;
+  border-bottom: $border-size solid $border-color;
+}
+
+$sidenav-active-list-color: map-get($background, card);
+$sidenav-nav-list-color: mat-color($background, disabled-button);
+
+.nav-icon {
+  color: $sidenav-icon-color;
+  margin-left: $medium-grid-gap;
+}
+
+.nav-label {
+  padding-left: 12px;
+}
+
+.ob-body .sidenav-nav {
+  &.mat-list-base {
+    .mat-list-item {
+      color: $sidenav-nav-list-color;
+
+      .mat-list-item-content {
+        padding: 0 12px;
+      }
+    }
+  }
+
+  &.mat-nav-list .mat-list-item {
+    &.active,
+    &:hover {
+      color: $sidenav-active-list-color;
+
+      .nav-icon {
+        color: $primary-color;
+      }
+    }
+  }
+}

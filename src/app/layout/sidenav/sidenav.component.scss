@@ -1,5 +1,7 @@
 @import '~src/styles/shared';
 
+$content-left-padding: $sidenav-width + $border-size + $x-large-grid-gap;
+
 .sidenav-container {
     position: absolute;
     top: $toolbar-height;
@@ -27,7 +29,7 @@
 .sidenav-content {
   &.mat-drawer-content {
     background-color: $background-color;
-    padding-left: $sidenav-width + $border-size;
+    padding: $large-grid-gap $x-large-grid-gap  $large-grid-gap $content-left-padding;
   }
 }
 
@@ -48,4 +50,8 @@
 .main-nav {
   display: block;
   padding-bottom: $x-large-grid-gap;
+}
+
+.logout {
+  margin: $x-large-grid-gap 0;
 }
