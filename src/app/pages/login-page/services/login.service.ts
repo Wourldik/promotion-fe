@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {FacebookAuthProvider, GoogleAuthProvider} from "firebase/auth";
+import {Router} from "@angular/router";
 
 import {ILoginFormValue} from "../shared/login-form";
 
@@ -8,12 +9,14 @@ import {ILoginFormValue} from "../shared/login-form";
 export class LoginService {
   constructor(
     private auth: AngularFireAuth,
+    private router: Router
   ) {}
 
   login(value: ILoginFormValue): void {
     this.auth
       .signInWithEmailAndPassword(value.email, value.password)
       .then(() => {
+        this.router.navigate(['./dashboard']);
         console.log('Signed in successfully!');
       });
   }
@@ -22,6 +25,7 @@ export class LoginService {
     this.auth
       .signInWithPopup(new GoogleAuthProvider())
       .then(() => {
+        this.router.navigate(['./dashboard']);
         console.log('Signed in with Google successfully!');
       })
       .catch(error => {
@@ -33,6 +37,7 @@ export class LoginService {
     this.auth
       .signInWithPopup(new FacebookAuthProvider())
       .then(() => {
+        this.router.navigate(['./dashboard']);
         console.log('Signed in with Facebook successfully!');
       })
       .catch(error => {

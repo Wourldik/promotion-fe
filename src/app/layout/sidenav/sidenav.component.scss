@@ -1,7 +1,51 @@
 @import '~src/styles/shared';
 
+.sidenav-container {
+    position: absolute;
+    top: $toolbar-height;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+
+  .mat-drawer-backdrop {
+    position: fixed;
+  }
+
+  .mat-drawer:not(.mat-drawer-side) {
+    box-shadow: none;
+  }
+
+  &.mat-drawer-container {
+    @extend %grow-column;
+
+    // https://bugs.webkit.org/show_bug.cgi?id=160953
+    z-index: auto;
+  }
+}
+
+.sidenav-content {
+  &.mat-drawer-content {
+    background-color: $background-color;
+    padding-left: $sidenav-width + $border-size;
+  }
+}
 
 .sidenav {
-  width: $sidenav-width;
-  border-right: 1px solid black;
+  width: $sidenav-width + $border-size;
+  padding: $large-grid-gap $x-large-grid-gap;
+  border-right: $border-size solid $border-color;
+
+  &.mat-drawer {
+    background-color: $card-background-color;
+  }
+}
+
+.sidenav-toolbar .mat-toolbar {
+  border-bottom: $border-size solid $border-color;
+}
+
+.main-nav {
+  display: block;
+  padding-bottom: $x-large-grid-gap;
 }

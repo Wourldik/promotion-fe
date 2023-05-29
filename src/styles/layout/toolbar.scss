@@ -1,0 +1,23 @@
+@import '../shared';
+
+.pr-body {
+  .mat-toolbar {
+    .logo {
+      margin-left: 12px;
+    }
+
+    &.colored-toolbar {
+      background: $card-background-color;
+      border-bottom: $border-size solid $border-color;
+    }
+  }
+  .mat-toolbar-multiple-rows {
+    min-height: $toolbar-height;
+  }
+
+  .mat-toolbar-row,
+  .mat-toolbar-single-row {
+    padding: 0 12px;
+    height: $toolbar-height;
+  }
+}

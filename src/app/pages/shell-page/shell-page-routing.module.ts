@@ -8,7 +8,20 @@ const routes: Routes = [
     path: '',
     component: ShellPageComponent,
     runGuardsAndResolvers: 'always',
-    children: [],
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'dashboard',
+      },
+      {
+        path: 'dashboard',
+        loadChildren: () =>
+          import('./pages/dashboard-page/dashboard-page.module').then(
+            m => m.DashboardPageModule
+          ),
+      },
+    ]
   },
 ];
 

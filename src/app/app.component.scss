@@ -1,1 +1,6 @@
 @import '~src/styles/shared';
+
+:host {
+  @extend %grow-column;
+}
+
