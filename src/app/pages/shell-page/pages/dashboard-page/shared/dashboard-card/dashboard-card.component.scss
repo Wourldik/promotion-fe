@@ -1,0 +1,15 @@
+@import '~src/styles/shared';
+
+$max-card-width: 372px;
+
+:host {
+  @extend %grow-column;
+  max-width: $max-card-width;
+  margin: $large-grid-gap;
+  flex: 1 1 33%;
+}
+
+.card-subtitle {
+  display: flex;
+  justify-content: space-between;
+}

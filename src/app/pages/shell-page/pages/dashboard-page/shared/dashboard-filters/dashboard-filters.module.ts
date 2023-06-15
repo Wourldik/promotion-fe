@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
-import {DashboardFiltersComponent} from "./dashboard-filters.component";
-import {SharedModule} from "@shared/modules";
+import { DashboardFiltersComponent} from "./dashboard-filters.component";
+import { SharedModule} from "@shared/modules";
 
 
 

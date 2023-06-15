@@ -3,3 +3,16 @@
 :host {
   @extend %grow-column;
 }
+
+.cards-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 70%;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+}
