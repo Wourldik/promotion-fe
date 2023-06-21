@@ -1,12 +1,21 @@
 <mat-card class="example-card">
   <img
+    class="card-image"
     mat-card-image
     src="https://material.angular.io/assets/img/examples/shiba2.jpg"
     alt="Photo of a Shiba Inu"
   />
+  <button
+    class="card-menu-button"
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon [color]="'accent'">more_vert</mat-icon>
+  </button>
   <mat-card-header>
     <mat-card-subtitle class="card-subtitle">
-      <div>Dog Breed </div>
+      <div>{{ 'Dog Breed' | uppercase }}</div>
       <div>3 days ago</div>
     </mat-card-subtitle>
     <mat-card-title>Shiba Inu</mat-card-title>
@@ -19,9 +28,24 @@
       bred for hunting.
     </p>
   </mat-card-content>
+
   <mat-card-actions>
-    <div mat-card-avatar class="example-header-image"></div>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+    <div class="author">
+      <div class="author-image"></div>
+      <span class="author-name">Glem Wiliams</span>
+    </div>
+
+    <a class="card-button" mat-button>
+      Read more
+      <mat-icon>arrow_right_alt</mat-icon>
+    </a>
   </mat-card-actions>
 </mat-card>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <span>Edit</span>
+  </button>
+  <button mat-menu-item>
+    <span>Delete</span>
+  </button>
+</mat-menu>

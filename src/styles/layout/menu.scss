@@ -25,5 +25,9 @@ $menu-item-height: 24px + ($medium-grid-gap * 2);
     height: $menu-item-height;
     line-height: $menu-item-height;
     text-decoration: none;
+
+    &:hover {
+      color: $sidenav-icon-color;
+    }
   }
 }

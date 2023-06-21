@@ -9,7 +9,51 @@ $max-card-width: 372px;
   flex: 1 1 33%;
 }
 
+.example-card {
+  flex: 1 1 auto;
+}
+
 .card-subtitle {
   display: flex;
   justify-content: space-between;
+}
+
+.author-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: $card-link-color;
+
+  &-name {
+    padding: 0 $medium-grid-gap;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.card-button {
+  font-size: 11px;
+  color: $card-link-color;
+  padding-bottom: $medium-grid-gap;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-menu-button {
+  position: absolute;
+  right: 10px;
 }

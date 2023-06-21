@@ -1,0 +1,8 @@
+@import '~src/styles/shared';
+
+$max-card-width: 372px;
+
+:host {
+  @extend %grow-column;
+  margin: $large-grid-gap $large-grid-gap 0;
+}

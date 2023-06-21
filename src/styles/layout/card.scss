@@ -8,4 +8,10 @@
     width: 100%;
     margin: 0;
   }
+
+  .mat-card-actions {
+    margin: 0 ;
+    display: flex;
+    justify-content: space-between
+  }
 }
