@@ -18,10 +18,12 @@ import { ShellPageComponent } from './pages/shell-page/shell-page.component';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import {ToolbarModule} from "@layout/toolbar";
 import {SidenavModule} from "@layout/sidenav";
+import {shared} from "./pages/shell-page/shared";
 
 @NgModule({
   declarations: [AppComponent, ShellPageComponent],
   imports: [
+    shared,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
