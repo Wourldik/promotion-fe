@@ -1,0 +1,28 @@
+<mat-card class="weather-card">
+  <mat-card-header>
+    <mat-card-subtitle class="card-subtitle">
+      <div>{{ 'Weather widget' | uppercase }}</div>
+      <button
+        class="card-menu-button"
+        mat-icon-button
+        aria-label="Example icon-button with a menu"
+      >
+        <mat-icon [color]="'accent'">more_vert</mat-icon>
+      </button>
+    </mat-card-subtitle>
+
+    <mat-card-title>June</mat-card-title>
+    <mat-card-subtitle>Wednesday</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content class="card-content">
+    <div class="weather-wrapper">
+      <span class="temperature">27</span>
+      <span class="location">Lviv, Ukraine</span>
+    </div>
+
+    <div class="weather-icon">
+      <span class="temperature">27</span>
+    </div>
+  </mat-card-content>
+</mat-card>

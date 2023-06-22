@@ -1,11 +1,21 @@
-<pr-dashboard-filters></pr-dashboard-filters>
+<div class="content-wrap">
+  <div class="cards-wrap">
+    <pr-dashboard-filters></pr-dashboard-filters>
 
-<div class="cards-wrap">
-  <div class="cards-list">
-    <pr-dashboard-card></pr-dashboard-card>
-    <pr-dashboard-card></pr-dashboard-card>
-    <pr-dashboard-card></pr-dashboard-card>
-    <pr-dashboard-card></pr-dashboard-card>
-    <pr-dashboard-card></pr-dashboard-card>
+    <div class="cards-list">
+      <pr-dashboard-card></pr-dashboard-card>
+      <pr-dashboard-card></pr-dashboard-card>
+      <pr-dashboard-card></pr-dashboard-card>
+      <pr-dashboard-card></pr-dashboard-card>
+      <pr-dashboard-card></pr-dashboard-card>
+    </div>
+  </div>
+
+  <div class="widget-wrap">
+    <button mat-flat-button class="article-button" [color]="'primary'">
+      <mat-icon>add</mat-icon>
+      Add article
+    </button>
+    <pr-weather-widget></pr-weather-widget>
   </div>
 </div>

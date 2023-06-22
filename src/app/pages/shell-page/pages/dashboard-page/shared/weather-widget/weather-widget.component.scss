@@ -1,0 +1,29 @@
+@import '~src/styles/shared';
+
+$max-card-width: 372px;
+
+:host {
+  @extend %grow-column;
+  max-width: $max-card-width;
+}
+
+.card-subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card-content {
+  display: flex;
+}
+
+.weather-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3 * $x-large-grid-gap;
+}
+
+.temperature {
+  font-size: 52px;
+  line-height: 52px;
+}
