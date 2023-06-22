@@ -1,0 +1,53 @@
+@import '~src/styles/shared';
+
+$profile-company-color: #646987;
+$profile-company-line-height: 14px;
+$chevron-filled-dark: #28284b;
+
+:host {
+  @extend %shrink-row;
+  margin-left: auto;
+}
+
+.profile-container {
+  align-items: center;
+  padding: $medium-grid-gap 0 $medium-grid-gap $large-grid-gap;
+}
+
+.profile-wrapper {
+  align-items: center;
+}
+
+.profile-icon {
+  color: $chevron-filled-dark;
+  transition: transform 270ms;
+}
+
+.opened .profile-icon {
+  transform: rotate(180deg);
+}
+
+.profile-name,
+.profile-company {
+  margin: 0;
+}
+
+.profile-name {
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: $large-grid-gap;
+}
+
+.profile-menu-wrapper {
+  padding-left: $medium-grid-gap;
+}
+
+.profile-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}

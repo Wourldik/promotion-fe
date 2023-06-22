@@ -17,7 +17,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { ShellPageComponent } from './pages/shell-page/shell-page.component';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import {ToolbarModule} from "@layout/toolbar";
-import {SidenavModule} from "@layout/sidenav/sidenav.module";
+import {SidenavModule} from "@layout/sidenav";
 
 @NgModule({
   declarations: [AppComponent, ShellPageComponent],

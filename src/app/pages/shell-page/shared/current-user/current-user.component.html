@@ -1,0 +1,29 @@
+<div class="shrink-row profile-container">
+  <div class="shrink-row profile-wrapper">
+    <div class="profile-image"></div>
+    <p class="profile-name text-overflow">
+      Olena Oleksyn
+    </p>
+  </div>
+
+  <div class="profile-menu-wrapper" [ngClass]="{ opened: isOpened }">
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="profileMenu"
+      (menuClosed)="onMenuToggle()"
+      (menuOpened)="onMenuToggle()"
+    >
+      <mat-icon class="profile-icon">keyboard_arrow_down</mat-icon>
+    </button>
+
+    <mat-menu
+      #profileMenu="matMenu"
+      [class]="'profile-menu'"
+      [xPosition]="'before'"
+    >
+      <a mat-menu-item [routerLink]="'/settings'">
+        Edit profile
+      </a>
+    </mat-menu>
+  </div>
+</div>
