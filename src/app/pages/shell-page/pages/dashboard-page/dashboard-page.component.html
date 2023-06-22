@@ -12,7 +12,9 @@
   </div>
 
   <div class="widget-wrap">
-    <button mat-flat-button class="article-button" [color]="'primary'">
+    <button mat-flat-button class="article-button"
+            [color]="'primary'"
+            [routerLink]="['/create-article']">
       <mat-icon>add</mat-icon>
       Add article
     </button>

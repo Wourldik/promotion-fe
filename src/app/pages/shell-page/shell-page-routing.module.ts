@@ -21,6 +21,13 @@ const routes: Routes = [
             m => m.DashboardPageModule
           ),
       },
+      {
+        path: 'create-article',
+        loadChildren: () =>
+          import('./pages/create-article-page/create-article-page.module').then(
+            m => m.CreateArticlePageModule
+          ),
+      },
     ]
   },
 ];
