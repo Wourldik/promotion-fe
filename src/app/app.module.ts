@@ -10,7 +10,7 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InputModule } from '@layout/form-controls/input/input.module';
+import { SearchModule } from '@layout/form-controls/search-input/search.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -27,7 +27,7 @@ import {shared} from "./pages/shell-page/shared";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    InputModule,
+    SearchModule,
     AngularFireModule.initializeApp(environment.firebase), // Initialize Firebase
     AngularFireAuthModule, // Import the authentication module
     AngularFireDatabaseModule, // Import the database module

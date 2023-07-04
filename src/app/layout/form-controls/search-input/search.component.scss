@@ -1,0 +1,10 @@
+@import '~src/styles/shared';
+
+:host {
+  @extend %shrink-row;
+  margin-right: auto;
+}
+
+.search-input {
+  width: 365px;
+}

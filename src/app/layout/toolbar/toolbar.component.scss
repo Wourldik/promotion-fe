@@ -1,7 +1,7 @@
 @import '~src/styles/shared';
 
 .sidenav-spacer {
-  width: $sidenav-width - 12px;
+  width: $large-grid-gap * 2;
 }
 
 .main-toolbar {

@@ -79,7 +79,6 @@ mat-label {
 
   .mat-form-field-infix {
     width: 100%;
-
     padding: $infix-padding-tb $infix-padding-lf;
     // Throws off the baseline if we do it as a real margin, so we do it as a border instead.
     border-top: 0 solid transparent;
@@ -117,6 +116,11 @@ mat-label {
       }
     }
 
+    .mat-form-field-infix {
+      max-width: 35px;
+      padding-left: $medium-grid-gap;
+    }
+
     &.mat-form-field-can-float.mat-form-field-should-float {
       .mat-form-field-outline-gap {
         border-top-color: currentColor;
@@ -134,7 +138,7 @@ mat-label {
       margin-top: $mat-form-field-outline-label-overlap;
       position: relative;
 
-      background: $card-background-color;
+      background: $dark-background-color;
     }
 
     &.mat-form-field-disabled {
@@ -152,7 +156,6 @@ mat-label {
     }
 
     .mat-form-field-wrapper {
-      margin-top: 38px;
       margin-bottom: 0;
     }
 
