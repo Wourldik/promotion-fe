@@ -3,13 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { CreateArticlePageRoutingModule } from './create-article-page-routing.module';
 import {CreateArticlePageComponent} from "./create-article-page.component";
+import {shared} from "./shared";
 
 
 @NgModule({
   declarations: [CreateArticlePageComponent],
-  imports: [
-    CommonModule,
-    CreateArticlePageRoutingModule
-  ]
+  imports: [shared, CommonModule, CreateArticlePageRoutingModule],
 })
 export class CreateArticlePageModule { }

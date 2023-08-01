@@ -21,6 +21,10 @@ export class FormService extends BaseFormService<ILoginFormValue> {
         null,
         Validators.compose([Validators.required])
       ),
+      [FormControl.PHOTO]: this.fb.control(
+        null,
+        Validators.compose([Validators.required])
+      ),
     });
   }
 }

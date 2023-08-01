@@ -1,0 +1,7 @@
+@import '~src/styles/shared';
+
+:host {
+  @extend %grow-column;
+  align-items: center;
+  justify-content: center;
+}

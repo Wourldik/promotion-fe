@@ -1,0 +1,23 @@
+@import '~src/styles/shared';
+
+:host {
+  @extend %grow-column;
+}
+
+.form-title {
+  font-size: 16px;
+  padding: $medium-grid-gap 0 $x-large-grid-gap 0;
+  border-bottom: $border-size solid $border-color;
+}
+
+.form-content {
+  padding: $large-grid-gap 0;
+}
+
+.form-footer {
+  padding: $large-grid-gap;
+}
+
+.cancel-button {
+  margin-right: $large-grid-gap;
+}
