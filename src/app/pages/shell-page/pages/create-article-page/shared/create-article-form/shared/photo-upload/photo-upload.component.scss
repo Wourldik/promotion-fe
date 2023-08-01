@@ -1,0 +1,20 @@
+@import '~src/styles/shared';
+
+:host {
+  @extend %grow-column;
+}
+
+.photo-title {
+  margin-bottom: $small-grid-gap;
+}
+
+.photo-subtitle {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.photo-wrapper {
+  width: 462px;
+  height: 170px;
+  border: $border-size dashed $grey-color;
+}
