@@ -18,6 +18,10 @@ export class CreateArticleFormComponent implements OnInit {
     return this.formService.form;
   }
 
+  get photoControl(): FormControl {
+    return this.form.get(FormControl.PHOTO) as unknown as FormControl;
+  }
+
   get valid(): boolean {
     return this.formService.valid;
   }
@@ -33,4 +37,6 @@ export class CreateArticleFormComponent implements OnInit {
   onCreate(): void {
     this.create.emit(this.formService.value);
   }
+
+  protected readonly FormControl = FormControl;
 }

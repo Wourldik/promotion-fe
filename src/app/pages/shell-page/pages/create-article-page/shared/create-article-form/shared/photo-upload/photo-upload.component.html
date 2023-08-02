@@ -10,7 +10,7 @@
   >
     <input
       class="photo-input"
-      #fileInput
+      [formControl]="photoControl"
       [accept]="'.jpg,.png'"
       [type]="'file'"
       [id]="'fileInput'"
@@ -26,7 +26,7 @@
 
     <div *ngIf="imageUrl" class="image-wrapper">
       <mat-icon class="close-icon" [color]="'accent'" (click)="replaceImage()"
-      >close</mat-icon
+        >close</mat-icon
       >
       <img [src]="imageUrl" class="preview" />
     </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'pr-photo-upload',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photo-upload.component.scss']
 })
 export class PhotoUploadComponent {
+  @Input()
+  photoControl: FormControl;
+
   imageUrl: string | ArrayBuffer | null = null;
-  isImageUploaded = false;
 
   onDragOver(event: DragEvent): void {
     event.preventDefault();
@@ -43,14 +46,13 @@ export class PhotoUploadComponent {
     const reader = new FileReader();
     reader.onloadend = () => {
       this.imageUrl = reader.result;
-      this.isImageUploaded = true;
     };
     reader.readAsDataURL(file);
   }
 
   replaceImage(): void {
     this.imageUrl = null;
-    this.isImageUploaded = false;
+    this.photoControl.setValue(null);
   }
 
   private highlightDropzone(highlight: boolean): void {

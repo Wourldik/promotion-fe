@@ -22,6 +22,10 @@ export class FormService extends BaseFormService<IArticleFormValue> {
         null,
         Validators.compose([Validators.required])
       ),
+      [FormControl.PHOTO]: this.fb.control(
+        null,
+        Validators.compose([Validators.required])
+      ),
     });
   }
 }
