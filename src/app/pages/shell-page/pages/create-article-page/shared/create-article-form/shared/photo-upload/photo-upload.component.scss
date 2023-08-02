@@ -1,5 +1,7 @@
 @import '~src/styles/shared';
 
+$icon-size: 62px;
+
 :host {
   @extend %grow-column;
 }
@@ -13,8 +15,48 @@
   line-height: 15px;
 }
 
-.photo-wrapper {
-  width: 462px;
-  height: 170px;
+.dropzone {
+  padding: $large-grid-gap;
+  text-align: center;
+  cursor: pointer;
   border: $border-size dashed $grey-color;
+}
+
+.preview {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.close-icon {
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.photo-input {
+  display: none;
+}
+
+.photo-icon {
+  font-size: $icon-size;
+  height: $icon-size;
+  width: $icon-size;
+}
+
+.photo-header {
+  font-size: 13px;
+  color: $grey-color;
+  margin-bottom: 0;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.photo-link {
+  font-size: 13px;
+  color: $primary-color;
+  cursor: pointer;
+  text-decoration: underline;
 }
