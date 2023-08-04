@@ -46,6 +46,7 @@ export class PhotoUploadComponent {
     const reader = new FileReader();
     reader.onloadend = () => {
       this.imageUrl = reader.result;
+      this.convertImageToBase64(file);
     };
     reader.readAsDataURL(file);
   }
@@ -53,6 +54,15 @@ export class PhotoUploadComponent {
   replaceImage(): void {
     this.imageUrl = null;
     this.photoControl.setValue(null);
+  }
+
+  private convertImageToBase64(file: File): void {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const base64String = reader.result?.toString() || '';
+      this.photoControl.setValue(base64String);
+    };
+    reader.readAsDataURL(file);
   }
 
   private highlightDropzone(highlight: boolean): void {
