@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormGroup} from "@angular/forms";
 
 import {FormService} from "./services";
@@ -12,8 +12,10 @@ import {FormControl} from "./enums";
   viewProviders: [FormService],
 })
 export class CreateArticleFormComponent implements OnInit {
+  @Output()
   readonly create = new EventEmitter<IArticleFormValue>();
 
+  protected readonly FormControl = FormControl;
   get form(): FormGroup {
     return this.formService.form;
   }
@@ -37,6 +39,4 @@ export class CreateArticleFormComponent implements OnInit {
   onCreate(): void {
     this.create.emit(this.formService.value);
   }
-
-  protected readonly FormControl = FormControl;
 }

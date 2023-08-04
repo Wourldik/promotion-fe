@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import {IArticleFormValue} from "./shared/create-article-form";
+import {CreateArticleService} from "./services";
+
 @Component({
   selector: 'pr-create-article-page',
   templateUrl: './create-article-page.component.html',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateArticlePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private articleService: CreateArticleService) { }
 
   ngOnInit(): void {
   }
 
+  onCreate(article: IArticleFormValue) {
+    // @ts-ignore
+    this.articleService.addArticle(article);
+  }
 }

@@ -1,5 +1,5 @@
 export enum FormControl {
   TITLE = 'title',
-  TEXT = 'text',
-  PHOTO = 'photo',
+  TEXT = 'descriptions',
+  PHOTO = 'articleImage',
 }

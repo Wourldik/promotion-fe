@@ -20,6 +20,9 @@
     "paths": {
       "@shared/modules": ["src/app/shared/modules"],
       "@shared/services": ["src/app/shared/services"],
+      "@shared/models": ["src/app/shared/models"],
+      "@shared/enums": ["src/app/shared/enums"],
+      "@shared/interfaces": ["src/app/shared/interfaces"],
       "@features/*": ["src/app/features/*"],
       "@layout/*": ["src/app/layout/*"]
     }

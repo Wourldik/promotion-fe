@@ -1,5 +1,7 @@
+import {FormControl} from "../enums";
+
 export interface IArticleFormValue {
-  title: string;
-  text: string;
-  photo: string;
+  [FormControl.TITLE]: string;
+  [FormControl.TEXT]: string;
+  [FormControl.PHOTO]: string;
 }
