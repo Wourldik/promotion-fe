@@ -8,7 +8,7 @@ describe('PhotoUploadComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PhotoUploadComponent ]
+      declarations: [PhotoUploadComponent],
     })
     .compileComponents();
   });

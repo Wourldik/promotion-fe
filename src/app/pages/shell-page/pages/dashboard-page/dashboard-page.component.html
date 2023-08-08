@@ -3,18 +3,20 @@
     <pr-dashboard-filters></pr-dashboard-filters>
 
     <div class="cards-list">
-      <pr-dashboard-card></pr-dashboard-card>
-      <pr-dashboard-card></pr-dashboard-card>
-      <pr-dashboard-card></pr-dashboard-card>
-      <pr-dashboard-card></pr-dashboard-card>
-      <pr-dashboard-card></pr-dashboard-card>
+      <pr-dashboard-card
+        *ngFor="let article of articles$ | async"
+        [article]="article"
+      ></pr-dashboard-card>
     </div>
   </div>
 
   <div class="widget-wrap">
-    <button mat-flat-button class="article-button"
-            [color]="'primary'"
-            [routerLink]="['/create-article']">
+    <button
+      mat-flat-button
+      class="article-button"
+      [color]="'primary'"
+      [routerLink]="['/create-article']"
+    >
       <mat-icon>add</mat-icon>
       Add article
     </button>
