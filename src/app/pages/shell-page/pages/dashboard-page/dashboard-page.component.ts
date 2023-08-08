@@ -10,7 +10,7 @@ import {ArticlePreview} from "@shared/models";
   styleUrls: ['./dashboard-page.component.scss']
 })
 export class DashboardPageComponent implements OnInit {
-  articles$: Observable<ArticlePreview[] | null>;
+  articles$: Observable<ArticlePreview[] | null> | undefined;
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit(): void {

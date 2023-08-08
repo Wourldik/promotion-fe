@@ -5,7 +5,7 @@ import {ArticlePreview} from "@shared/models";
 @Component({
   selector: 'pr-dashboard-card',
   templateUrl: './dashboard-card.component.html',
-  styleUrls: ['./dashboard-card.component.scss']
+  styleUrls: ['./dashboard-card.component.scss'],
 })
 export class DashboardCardComponent implements OnInit {
   @Input()
