@@ -9,6 +9,7 @@ export class ArticlePreview implements IArticlePreview {
   date: Date | null;
   descriptions: string;
   title: string;
+  id?: string;
 
   constructor(obj: Readonly<IArticlePreview>) {
     this.category = obj.category;
@@ -18,6 +19,7 @@ export class ArticlePreview implements IArticlePreview {
     this.articleImage = obj.articleImage;
     this.authorImage = obj.authorImage;
     this.authorName = obj.authorName;
+    this.id = obj.id;
   }
 
   static fromBackendFactory(
@@ -31,6 +33,7 @@ export class ArticlePreview implements IArticlePreview {
       articleImage: obj.articleImage,
       authorName: obj.authorName,
       authorImage: obj.authorImage,
+      id: obj.id,
     });
   }
 }

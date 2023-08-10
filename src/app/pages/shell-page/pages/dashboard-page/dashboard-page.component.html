@@ -6,6 +6,8 @@
       <pr-dashboard-card
         *ngFor="let article of articles$ | async"
         [article]="article"
+        (articleDeleted)="onArticleDelete($event)"
+        (articleEdited)="onArticleEdit($event)"
       ></pr-dashboard-card>
     </div>
   </div>

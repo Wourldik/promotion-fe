@@ -8,4 +8,5 @@ export interface IArticlePreview {
   authorName: string;
   authorImage: string | null;
   articleImage: string | null;
+  id?: string;
 }

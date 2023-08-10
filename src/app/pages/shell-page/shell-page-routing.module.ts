@@ -22,13 +22,20 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'create-article/:id',
+        loadChildren: () =>
+          import('./pages/create-article-page/create-article-page.module').then(
+            m => m.CreateArticlePageModule
+          ),
+      },
+      {
         path: 'create-article',
         loadChildren: () =>
           import('./pages/create-article-page/create-article-page.module').then(
             m => m.CreateArticlePageModule
           ),
       },
-    ]
+    ],
   },
 ];
 

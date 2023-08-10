@@ -31,7 +31,15 @@
 
   <mat-card-actions>
     <div class="author">
-      <div class="author-image"></div>
+      <div class="author-image">
+        <div
+          [ngStyle]="{
+            'background-image': article.authorImage
+              ? 'url(' + article.authorImage + ')'
+              : 'none'
+          }"
+        ></div>
+      </div>
       <span class="author-name">{{ article.authorName }}</span>
     </div>
 
@@ -42,10 +50,10 @@
   </mat-card-actions>
 </mat-card>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>
+  <button mat-menu-item [routerLink]="['/create-article', article.id]">
     <span>Edit</span>
   </button>
-  <button mat-menu-item>
+  <button mat-menu-item (click)="onDelete(article.id)">
     <span>Delete</span>
   </button>
 </mat-menu>

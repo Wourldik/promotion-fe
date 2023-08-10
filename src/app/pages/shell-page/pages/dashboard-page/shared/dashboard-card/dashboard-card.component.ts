@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 import {ArticlePreview} from "@shared/models";
 
@@ -7,13 +7,22 @@ import {ArticlePreview} from "@shared/models";
   templateUrl: './dashboard-card.component.html',
   styleUrls: ['./dashboard-card.component.scss'],
 })
-export class DashboardCardComponent implements OnInit {
+export class DashboardCardComponent {
   @Input()
   article: ArticlePreview;
 
-  constructor() { }
+  @Output()
+  readonly articleDeleted = new EventEmitter<string>();
 
-  ngOnInit(): void {
+  @Output()
+  readonly articleEdited = new EventEmitter<string>();
+
+  onEdit(id: any): void {
+    this.articleEdited.emit(id);
+  }
+
+  onDelete(id: any): void {
+    this.articleDeleted.emit(id);
   }
 
 }
